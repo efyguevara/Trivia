@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TRIVIA</title>
+    <link rel="stylesheet" href="Trivia.css" type="text/css">
+</head>
+<body>
+    <script type='text/javascript' src='Trivia.js'></script>
+
+    <div id='pantalla1' class='container center'>
+      <h1>BIENVENID@ A TRIVIA GASTRONÓMICA</h1>
+      <br>
+      <h2>Ingresa tu nombre:</h2>
+      <input type='text' id='nombre' placeHolder='Introduce tu nombre' value='' required>
+      <br>
+      <br>
+      <button class='center' onclick='pantalla2()' type='button' name='button'>CONTINUAR</button>
+    </div>
+
+    <div id='pantalla2' class='container center hidden'>
+      <h1 id='saludo'></h1>
+      <h2>Selecciona una categoría de juego</h2>
+      <button class='center' onclick='seccionA()' type='button' name='comida'>COMIDA</button>
+      <button class='center' onclick='seccionB()' type='button' name='cerveza'>CERVEZA</button>
+      <button class='center' onclick='seccionC()' type='button' name='musica'>MUSICA</button>
+    </div>
+
+    <div id='questionsA' class='container center hidden'>
+          <p>
+            <b>Pregunta Nº1:</b><br>
+            Al completo italiano se le dice así porque <br>
+            <input type='radio' id='optionOne' name='questionOne' value='0'> A)Lleva palta, tomate y mostaza <br>
+            <input type='radio' id='optionTwo' name='questionOne' value='1'> B)Lleva palta, tomate y mayonesa <br>
+            <input type='radio' id='optionThree' name='questionOne' value='0'> C)Lleva vienesa y ketchup
+          </p>
+          <p>
+            <b>Pregunta Nº2:</b><br>
+            El sandwich Barros Luco debe su nombre a <br>
+            <input type='radio' id='optionFour' name='questionTwo' value='0'> A)Un ex ministro chileno <br>
+            <input type='radio' id='optionFive' name='questionTwo' value='0'> B)Un ex presidente argentino <br>
+            <input type='radio' id='optionSix' name='questionTwo' value='1'> C)Un ex presidente chileno
+          </p>
+          <p>
+            <b>Pregunta Nº3:</b><br>
+            Este plato lleva carne de vacuno a la plancha, huevos y papas fritas<br>
+            <input type='radio' id='optionSeven' name='questionThree' value='1'> A)Lomo a lo pobre <br>
+            <input type='radio' id='optionEight' name='questionThree' value='0'> B)Charquicán <br>
+            <input type='radio' id='optionNine' name='questionThree' value='0'> C)Porotos con riendas
+          </p>
+          <button type='button' onclick='clickSendAnswersA()' name='finalizar'>FINALIZAR</button>
+    </div>
+
+    <div id='questionsB' class='container center hidden'>
+        <p>
+            <b>Pregunta Nº1:</b><br>
+            Se prepara mezclando la cerveza, jugo de limon y sal <br>
+            <input type='radio' id='optionOneB' name='questionOneB' value='0'> A)Terremoto <br>
+            <input type='radio' id='optionTwoB' name='questionOneB' value='1'> B)Michelada <br>
+            <input type='radio' id='optionThreeB' name='questionOneB' value='0'> C)Piscola
+        </p>
+        <p>
+        <b>Pregunta Nº2:</b><br>
+        Marca de cerveza chilena producida en la ciudad de Valdivia<br>
+        <input type='radio' id='optionFourB' name='questionTwoB' value='1'> A)Kunstmann <br>
+        <input type='radio' id='optionFiveB' name='questionTwoB' value='0'> B)Corona <br>
+        <input type='radio' id='optionSixB' name='questionTwoB' value='0'> C)Heineken
+        </p>
+        <p>
+            <b>Pregunta Nº3:</b><br>
+            La cerveza lager se caracteriza por<br>
+            <input type='radio' id='optionSevenB' name='questionThreeB' value='0'> A)Su color oscuro <br>
+            <input type='radio' id='optionEightB' name='questionThreeB' value='1'> B)Usar levadora de fermentación baja <br>
+            <input type='radio' id='optionNineB' name='questionThreeB' value='0'> C)Su nivel de espuma
+        </p>
+        <button type='button' onclick='clickSendAnswersB()' name='finalizar'>FINALIZAR</button>
+    </div>
+
+
+    <div id='questionsC' class='container center hidden'>
+        <p>
+            <b>Pregunta Nº1:</b><br>
+            ¿Cuántas cuerdas tiene normalmente una guitarra?<br>
+            <input type='radio' id='optionOneC' name='questionOnec' value='0'> A)5 <br>
+            <input type='radio' id='optionTwoC' name='questionOnec' value='1'> B)6 <br>
+            <input type='radio' id='optionThreeC' name='questionOnec' value='0'> C)5
+        </p>
+        <p>
+            <b>Pregunta Nº2:</b><br>
+            ¿En que año nacio jimi hendrix?<br>
+            <input type='radio' id='optionFourC' name='questionFourC' value='0'> A)1943 <br>
+            <input type='radio' id='optionFiveC' name='questionFiveC' value='1'> B)1942 <br>
+            <input type='radio' id='optionSixC' name='questionSixC' value='0'> C)1980
+        </p>
+        <p>
+            <b>Pregunta Nº3:</b><br>
+            ¿Quién compuso yellow submarine?<br>
+            <input type='radio' id='optionSevenC' name='questionSevenC' value='0'> A)Metallica <br>
+            <input type='radio' id='optionEightC' name='questionEightC' value='1'> B)The Beatles <br>
+            <input type='radio' id='optionNineC' name='questionNineC' value='0'> C)Los Prisioneros
+         </p>
+         <button type='button' onclick='clickSendAnswersC()' name='finalizar'>FINALIZAR</button>
+    </div>
+
+          <div id= 'ultimaPantalla' class='container center hidden'>
+            <h1 id='points'></h1>
+            <h2>¿Jugar de nuevo?</h2>
+            <button  type='button' onclick='pantalla2_2()' name='si'>SI</button>
+            <button  type='button' onclick='pantallaFinal()'name='no'>NO</button>
+          </div>
+
+          <div id='pantallaFinal' class='container center hidden'>
+            <h1>GRACIAS POR PARTICIPAR!</h1>
+          </div>
+  </body>
+</html>

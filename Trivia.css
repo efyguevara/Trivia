@@ -1,0 +1,67 @@
+body {  
+  background: url("https://png.pngtree.com/back_origin_pic/04/10/92/91118d67a748939cba59be4bd081da95.jpg");
+  font-family: sans-serif;
+  font-size: 30px;
+  align: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+div.container{
+  width: 700px;
+  align: justify;
+}
+
+.center {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.containerPreg{
+  height: 50%;
+  width: 30%;
+  text-align: center;
+}
+
+button {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+	text-transform: uppercase;
+	background-color: #188ba5;
+	min-height: 35px;
+	min-width: 90px;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: black;
+  font-weight: italic;
+  background-color: inherit;
+  text-align: center;
+}
+
+h2  {
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+}
+
+h4 {
+  font-style: oblique;
+}
+
+input {
+  width: inherit;
+  font-size: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  font-family: sans-serif
+}
